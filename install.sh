@@ -177,6 +177,7 @@ install_mysql ()
 {
         cd /usr/src
         if [ "$DIST" = "DEBIAN" ]; then
+		apt-get install -y lsb-release
                 wget https://repo.mysql.com/mysql-apt-config_0.8.13-1_all.deb
                 dpkg -i mysql-apt-config_0.8.13-1_all.deb
                 apt update
